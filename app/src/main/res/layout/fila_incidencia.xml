@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fila_c"
+    android:layout_width="wrap_content"
+    android:layout_height="50dp"
+    android:gravity="center" xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/blanco"
+    android:weightSum="1">
+    <EditText
+        android:id="@+id/input_id"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:textColor="@color/black"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginBottom="1dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:background="#fff"
+        android:layout_weight="0.29"
+        android:gravity="center"
+        android:editable="false"/>
+    <EditText
+        android:id="@+id/input_incidencia"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginBottom="1dp"
+        android:textColor="@color/black"
+        android:layout_marginRight="2dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:background="#fff"
+        android:gravity="center"
+        android:editable="false"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fondo_boton"
+        android:layout_marginBottom="1dp"
+        android:layout_marginRight="2dp">
+        <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_buscar"
+                android:id="@+id/boton_bus"
+                android:theme="@style/EstiloBoton"/>
+    </LinearLayout>
+
+</TableRow>

@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gerencia.pc.gerencia_u3.fragment.NotaFragment">
+
+    <TextView
+        android:text="Nota de Incidencia:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="35dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/textView6"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:layout_below="@+id/textView6"
+        android:layout_marginTop="10dp"
+        android:id="@+id/input_nota"
+        android:layout_alignLeft="@+id/textView6"
+        android:layout_alignStart="@+id/textView6" />
+
+    <Button
+        android:text="Enviar Nota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_envia_nota"
+        android:theme="@style/EstiloBoton"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/input_nota"
+        android:layout_alignLeft="@+id/input_nota"
+        android:layout_alignStart="@+id/input_nota"
+        android:layout_alignRight="@+id/input_nota"
+        android:layout_alignEnd="@+id/input_nota" />
+
+    <TextView
+        android:text="@string/nota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:id="@+id/textView5"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

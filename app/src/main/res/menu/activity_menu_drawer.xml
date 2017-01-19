@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+        <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_principal"
+                    android:icon="@drawable/ic_descripcion"
+                    android:title="Principal" />
+                <item
+                    android:id="@+id/nav_reportar"
+                    android:icon="@drawable/ic_incidencia"
+                    android:title="Reportar Incidencia" />
+                <item
+                    android:id="@+id/nav_grafico"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:title="Reporte Grafico" />
+
+        </group>
+        <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_salir"
+                    android:icon="@drawable/ic_off"
+                    android:title="Salir" />
+        </group>
+</menu>

@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gerencia.pc.gerencia_u3.fragment.PieChartFragment"
+    android:background="#3D394D">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/piechar"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="Total de incidencias:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:id="@+id/textView5"
+                    android:textSize="15dp"
+                    android:gravity="left"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="25dp"
+                    android:textColor="@color/blanco" />
+
+                <TextView
+                    android:text="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:id="@+id/txt_total_inci"
+                    android:textSize="15dp"
+                    android:gravity="left"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="2dp"
+                    android:textColor="@color/blanco"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Gerencia de Sistemas</string>
+    <string name="title_activity_menu">MenuActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_panel">PanelActivity</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="descripcion">MIS ULTIMAS INCIDENCIAS\nREPORTADAS</string>
+    <string name="incidencia">DETALLE DE INCIDENCIA</string>
+    <string name="nota">ENVIAR NOTA DE INCIDENCIA</string>
+    <string name="pront_gragica">Selecionar Proyecto:</string>
+    <string name="pront_repro">Selecionar Reproducibilidad:</string>
+    <string name="pront_seve">Selecionar Severidad:</string>
+    <string name="pront_prio">Selecionar Prioridad:</string>
+    <string name="pront_catego">Selecionar Categoria:</string>
+    <string name="pront_usu">Selecionar Usuario:</string>
+
+    <array name="spinner_reprodu">
+        <item>Seleccione....</item>
+        <item>Siempre</item>
+        <item>A Veces</item>
+        <item>Aleatorio</item>
+        <item>No se ha intentado</item>
+        <item>No Reproducible</item>
+        <item>Desconocido</item>
+    </array>
+    <array name="spinner_severida">
+        <item>Seleccione....</item>
+        <item>Funcionalidad</item>
+        <item>Trivial</item>
+        <item>Texto</item>
+        <item>Ajuste</item>
+        <item>Menor</item>
+        <item>Mayor</item>
+        <item>Fallo</item>
+        <item>Bloqueo</item>
+    </array>
+    <array name="spinner_prioridad">
+        <item>Seleccione....</item>
+        <item>Ninguna</item>
+        <item>Baja</item>
+        <item>Normal</item>
+        <item>Alta</item>
+        <item>Urgente</item>
+        <item>Inmediata</item>
+    </array>
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow android:id="@+id/tableRow1"
+    android:layout_width="wrap_content"
+    android:layout_height="50dp"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#fff"
+    android:weightSum="1"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+     <EditText
+        android:id="@+id/textView1"
+        android:layout_width="100dp"
+        android:layout_height="49dp"
+        android:text="ID"
+        android:textColor="@color/blanco"
+        android:layout_marginRight="2dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:background="@color/encabezado"
+        android:layout_weight="0.29"
+        android:gravity="center"
+        android:editable="false"/>
+    <EditText
+        android:id="@+id/textView2"
+        android:layout_width="202dp"
+        android:layout_height="49dp"
+        android:text="Titulo Incidencia"
+        android:textColor="@color/blanco"
+        android:layout_marginRight="2dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:background="@color/encabezado"
+        android:gravity="center"
+        android:editable="false"/>
+    <EditText
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="49dp"
+        android:text="✎"
+        android:textColor="@color/blanco"
+        android:layout_marginRight="2dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:background="@color/encabezado"
+        android:gravity="center"
+        android:editable="false" />
+</TableRow>
