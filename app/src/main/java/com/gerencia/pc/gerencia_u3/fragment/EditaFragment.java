@@ -16,6 +16,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.gerencia.pc.gerencia_u3.Global;
 import com.gerencia.pc.gerencia_u3.MenuActivity;
 import com.gerencia.pc.gerencia_u3.R;
 import com.gerencia.pc.gerencia_u3.io.GerenciaApiAdapter;
@@ -59,7 +60,7 @@ public class EditaFragment extends Fragment implements Callback<EstadoResponce> 
         cargos=(Spinner)view.findViewById(R.id.spinner2);
         estados=(Spinner)view.findViewById(R.id.spinner3);
 
-        Call<EstadoResponce> call = GerenciaApiAdapter.getApiService().getEstados(id_inci,id_usu);
+        Call<EstadoResponce> call = GerenciaApiAdapter.getApiService(Global.getNombreUsuarioFromShared(getActivity(),"server")).getEstados(id_inci,id_usu);
         call.enqueue(this);
 
 
@@ -103,7 +104,7 @@ public class EditaFragment extends Fragment implements Callback<EstadoResponce> 
                 }else {
                     s=estados.getSelectedItem().toString();
                 }
-                Call<Reporte> calls=GerenciaApiAdapter.getApiService().setIp(id_inci,cargos.getSelectedItemPosition(),resul.getText().toString(),s);
+                Call<Reporte> calls=GerenciaApiAdapter.getApiService(Global.getNombreUsuarioFromShared(getActivity(),"server")).setIp(id_inci,cargos.getSelectedItemPosition(),resul.getText().toString(),s);
                 calls.enqueue(new actuyaluza());
             }
         });

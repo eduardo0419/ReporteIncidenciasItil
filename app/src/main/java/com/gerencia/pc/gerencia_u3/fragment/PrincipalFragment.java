@@ -14,6 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 
+import com.gerencia.pc.gerencia_u3.Global;
 import com.gerencia.pc.gerencia_u3.R;
 import com.gerencia.pc.gerencia_u3.io.GerenciaApiAdapter;
 import com.gerencia.pc.gerencia_u3.io.model.Incidencia;
@@ -52,7 +53,7 @@ public class PrincipalFragment extends Fragment implements Callback<IncidenciasR
 
     }
     public void TraerIncidencias(){
-        Call<IncidenciasResponse> call = GerenciaApiAdapter.getApiService().getIncidencias(id_usuario);
+        Call<IncidenciasResponse> call = GerenciaApiAdapter.getApiService(Global.getNombreUsuarioFromShared(getActivity(),"server")).getIncidencias(id_usuario);
         call.enqueue(this);
     }
 

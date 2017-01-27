@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.gerencia.pc.gerencia_u3.Global;
 import com.gerencia.pc.gerencia_u3.R;
 import com.gerencia.pc.gerencia_u3.io.GerenciaApiAdapter;
 import com.gerencia.pc.gerencia_u3.io.model.Dato;
@@ -66,7 +67,7 @@ public class IncidenciaFragment extends Fragment implements Callback<DatosRespon
 
 
     public void TraeDatos(){
-        Call<DatosResponce> call = GerenciaApiAdapter.getApiService().getDatos(id_incidencia);
+        Call<DatosResponce> call = GerenciaApiAdapter.getApiService(Global.getNombreUsuarioFromShared(getActivity(),"server")).getDatos(id_incidencia);
         call.enqueue(this);
     }
 

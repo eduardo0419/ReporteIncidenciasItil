@@ -1,5 +1,9 @@
 package com.gerencia.pc.gerencia_u3.io;
 
+import com.gerencia.pc.gerencia_u3.Global;
+
+import java.util.concurrent.TimeUnit;
+
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
@@ -9,18 +13,16 @@ public class GerenciaApiAdapter {
 
     private static GerenciaApiService API_SERVICE;
 
-    public static GerenciaApiService getApiService() {
+    public static GerenciaApiService getApiService(String url) {
 
         // Creating the interceptor, and setting the log level
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
         logging.setLevel(HttpLoggingInterceptor.Level.BODY);
 
         OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
-        // add logging as last interceptor
         httpClient.addInterceptor(logging);  // <-- this is the important line!
-
-        String baseUrl = "http://192.168.1.37/";
-
+        //String baseUrl = "http://192.168.1.37/";
+        String baseUrl = url;
         if (API_SERVICE == null) {
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl(baseUrl)

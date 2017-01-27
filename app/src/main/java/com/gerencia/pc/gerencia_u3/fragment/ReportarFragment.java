@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.gerencia.pc.gerencia_u3.Global;
 import com.gerencia.pc.gerencia_u3.R;
 import com.gerencia.pc.gerencia_u3.io.GerenciaApiAdapter;
 import com.gerencia.pc.gerencia_u3.io.model.Proyecto;
@@ -53,7 +54,7 @@ public class ReportarFragment extends Fragment implements Callback<ProyectosResp
     }
 
     public void traeProyectos(){
-        Call<ProyectosResponce> call = GerenciaApiAdapter.getApiService().getProyectos(id_usuario);
+        Call<ProyectosResponce> call = GerenciaApiAdapter.getApiService(Global.getNombreUsuarioFromShared(getActivity(),"server")).getProyectos(id_usuario);
         call.enqueue(this);
     }
 

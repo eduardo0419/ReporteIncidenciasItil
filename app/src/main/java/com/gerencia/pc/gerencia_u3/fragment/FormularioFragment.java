@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import com.gerencia.pc.gerencia_u3.Global;
 import com.gerencia.pc.gerencia_u3.R;
 import com.gerencia.pc.gerencia_u3.io.GerenciaApiAdapter;
 import com.gerencia.pc.gerencia_u3.io.model.Categoria;
@@ -84,7 +85,7 @@ public class FormularioFragment extends Fragment implements Callback<CategoriaRe
     }
 
     public void traeProyectos(){
-        Call<CategoriaResponce> call = GerenciaApiAdapter.getApiService().getCategoria(id_pro);
+        Call<CategoriaResponce> call = GerenciaApiAdapter.getApiService(Global.getNombreUsuarioFromShared(getActivity(),"server")).getCategoria(id_pro);
         call.enqueue(this);
     }
 
@@ -119,7 +120,7 @@ public class FormularioFragment extends Fragment implements Callback<CategoriaRe
     }
 
     public void traePersonal(){
-        Call<PersonalResponce> call = GerenciaApiAdapter.getApiService().getPersonal(id_pro,id_usuario);
+        Call<PersonalResponce> call = GerenciaApiAdapter.getApiService(Global.getNombreUsuarioFromShared(getActivity(),"server")).getPersonal(id_pro,id_usuario);
         call.enqueue(new LlenarSpinnerPersonal());
     }
 
@@ -183,7 +184,7 @@ public class FormularioFragment extends Fragment implements Callback<CategoriaRe
         String PasosReproducir =input_pasos.getText().toString();
         String InfoAdicional =input_infoadi.getText().toString();
 
-        Call<ReporteResponce> call= GerenciaApiAdapter.getApiService().setReporte(id_categoria,reproducibilidad,severidad,prioridad,id_asigna,titulo,PasosReproducir,InfoAdicional,id_pro,id_usuario);
+        Call<ReporteResponce> call= GerenciaApiAdapter.getApiService(Global.getNombreUsuarioFromShared(getActivity(),"server")).setReporte(id_categoria,reproducibilidad,severidad,prioridad,id_asigna,titulo,PasosReproducir,InfoAdicional,id_pro,id_usuario);
         call.enqueue(new enviaReporteIncidencia());
 
 

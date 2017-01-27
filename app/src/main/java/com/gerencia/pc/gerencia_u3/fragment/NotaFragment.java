@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.gerencia.pc.gerencia_u3.Global;
 import com.gerencia.pc.gerencia_u3.R;
 import com.gerencia.pc.gerencia_u3.io.GerenciaApiAdapter;
 import com.gerencia.pc.gerencia_u3.io.model.Nota;
@@ -56,7 +57,7 @@ public class NotaFragment extends Fragment implements View.OnClickListener, Call
     @Override
     public void onClick(View view) {
         if (view.getId()==R.id.btn_envia_nota){
-            Call<NotaResponce> call= GerenciaApiAdapter.getApiService().setNota(id_usuario,id_incidencia,input.getText().toString());
+            Call<NotaResponce> call= GerenciaApiAdapter.getApiService(Global.getNombreUsuarioFromShared(getActivity(),"server")).setNota(id_usuario,id_incidencia,input.getText().toString());
             call.enqueue(this);
         }
     }

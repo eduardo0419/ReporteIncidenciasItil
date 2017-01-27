@@ -14,6 +14,7 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.gerencia.pc.gerencia_u3.fragment.EditaFragment;
 import com.gerencia.pc.gerencia_u3.fragment.GraficaFragment;
 import com.gerencia.pc.gerencia_u3.fragment.IncidenciaFragment;
 import com.gerencia.pc.gerencia_u3.fragment.NotaFragment;
@@ -123,6 +124,13 @@ public class MenuActivity extends AppCompatActivity
                 return false;
             }
             if (currentFragment.getClass().getName()== NotaFragment.class.getName()) {
+                Bundle gameData = getIntent().getExtras();
+                int id_incidencia = gameData.getInt("id_incidencia");
+                FragmentManager fm = getSupportFragmentManager();
+                fm.beginTransaction().replace(R.id.fragmet_layout, new IncidenciaFragment(id_incidencia,id_usuario)).commit();
+                return false;
+            }
+            if (currentFragment.getClass().getName()== EditaFragment.class.getName()) {
                 Bundle gameData = getIntent().getExtras();
                 int id_incidencia = gameData.getInt("id_incidencia");
                 FragmentManager fm = getSupportFragmentManager();

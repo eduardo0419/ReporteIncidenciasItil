@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.gerencia.pc.gerencia_u3.Global;
 import com.gerencia.pc.gerencia_u3.R;
 import com.gerencia.pc.gerencia_u3.io.GerenciaApiAdapter;
 import com.gerencia.pc.gerencia_u3.io.model.Grafica;
@@ -57,7 +58,7 @@ public class GraficaFragment extends Fragment implements Callback<ProyectosRespo
     }
 
     public void traeProyectos(){
-        Call<ProyectosResponce> call = GerenciaApiAdapter.getApiService().getProyectos(id_usuario);
+        Call<ProyectosResponce> call = GerenciaApiAdapter.getApiService(Global.getNombreUsuarioFromShared(getActivity(),"server")).getProyectos(id_usuario);
         call.enqueue(this);
     }
 
@@ -107,7 +108,7 @@ public class GraficaFragment extends Fragment implements Callback<ProyectosRespo
         }
     }
     public void traeDatosGrafica(int id_pro){
-        Call<GraficaResponce> call= GerenciaApiAdapter.getApiService().getGrafica(id_pro);
+        Call<GraficaResponce> call= GerenciaApiAdapter.getApiService(Global.getNombreUsuarioFromShared(getActivity(),"server")).getGrafica(id_pro);
         call.enqueue(new Graficas());
     }
     public class Graficas implements Callback<GraficaResponce> {
